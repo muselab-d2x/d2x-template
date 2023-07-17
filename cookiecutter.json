@@ -1,6 +1,6 @@
 {
     "project_name": "Your Project Name",
-    "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
+    "project_slug": "{{ cookiecutter.project_name.replace(' ', '-') }}",
     "project_type": [
         "Unpackaged",
         "1GP Managed",
