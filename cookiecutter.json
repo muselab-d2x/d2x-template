@@ -1,0 +1,12 @@
+{
+    "project_name": "Your Project Name",
+    "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
+    "project_type": [
+        "Unpackaged",
+        "1GP Managed",
+        "2GP Unlocked",
+        "2GP Managed"
+    ],
+    "namespace": "",
+    "use_robot": false
+}

@@ -1,0 +1,38 @@
+minimum_cumulusci_version: '3.76.0'
+project:
+    name: {{ cookiecutter.project_slug }}
+    package:
+        name: {{ cookiecutter.project_name }}
+        {% if cookiecutter.namespace %}namespace: {{ cookiecutter.namespace }}{% endif %}
+        api_version: '55.0'
+    git:
+        default_branch: 'main'
+    source_format: sfdx
+
+tasks:
+{% if cookiecutter.use_robot %}    robot:
+        options:
+            suites: robot/{{ cookiecutter.project_slug }}/tests
+            options:
+                outputdir: robot/{{ cookiecutter.project_slug }}/results
+
+    robot_testdoc:
+        options:
+            path: robot/{{ cookiecutter.project_slug }}/tests
+            output: robot/{{ cookiecutter.project_slug }}/doc/{{ cookiecutter.project_slug }}_tests.html{% endif %}
+    run_tests:
+        options:
+            required_org_code_coverage_percent: 75
+
+orgs:
+    scratch:
+{% if cookiecutter.project_type != "Unpackaged" %}        beta:
+            config_file: orgs/managed.json{% endif %}
+        dev:
+            config_file: orgs/unmanaged.json
+        feature:
+            config_file: {% if cookiecutter.project_type == "Unpackaged" %}orgs/unmanaged.json{% else %}orgs/managed.json{% endif %}
+        qa:
+            config_file: {% if cookiecutter.project_type == "Unpackaged" %}orgs/unmanaged.json{% else %}orgs/managed.json{% endif %}
+{% if cookiecutter.project_type != "Unpackaged" %}        release:
+            config_file: orgs/managed.json{% endif %}
