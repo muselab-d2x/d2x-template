@@ -10,7 +10,7 @@ project:
     source_format: sfdx
 
 tasks:
-{% if cookiecutter.use_robot %}    robot:
+{% if cookiecutter.use_robot != "n" %}    robot:
         options:
             suites: robot/{{ cookiecutter.project_slug }}/tests
             options:

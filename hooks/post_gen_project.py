@@ -1,7 +1,7 @@
 import os
 import shutil
 
-{% if not cookiecutter.use_robot %}
+{% if cookiecutter.use_robot == "n" %}
 shutil.rmtree("robot")
 {% endif %}
 
