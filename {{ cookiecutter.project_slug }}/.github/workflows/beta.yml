@@ -1,4 +1,4 @@
-name: 2GP Beta Test
+name: Beta Test
 on:
     push:
         branches:
@@ -6,7 +6,7 @@ on:
 jobs:
     feature-test:
         name: "Beta Test"
-        uses: muselab-d2x/d2x/.github/workflows/beta{% if cookiecutter.project_type == "2GP Managed" %}-2gp{% elif cookiecutter.project_type == "2GP Unlocked" %}-unlocked{% endif %}.yml@main
+        uses: muselab-d2x/d2x/.github/workflows/beta-test{% if cookiecutter.project_type == "2GP Managed" %}-2gp{% elif cookiecutter.project_type == "2GP Unlocked" %}-unlocked{% endif %}.yml@main
         secrets:{% raw %}
             dev-hub-auth-url: "${{ secrets.DEV_HUB_AUTH_URL }}"
             gh-email: "${{ secrets.GH_EMAIL }}"
