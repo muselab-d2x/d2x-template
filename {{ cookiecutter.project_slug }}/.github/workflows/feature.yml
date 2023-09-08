@@ -1,4 +1,4 @@
-name: 2GP Feature Test
+name: {% if cookiecutter.project_type != "Unpackaged" %}2GP {% endif %}Feature Test
 on:
     push:
         branches:
