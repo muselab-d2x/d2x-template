@@ -3,7 +3,9 @@ on:
     push:
         branches:
             - feature/**
-            - main
+            # Uncomment the line below to build commits on main
+            # This is commented out by default to minimize scratch org usage
+            #- main
 jobs:
     feature-test:
         name: "Feature Test"
