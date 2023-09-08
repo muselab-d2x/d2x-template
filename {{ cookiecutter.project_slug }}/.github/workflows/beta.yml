@@ -4,7 +4,7 @@ on:
         branches:
             - main
 jobs:
-    feature-test:
+    beta-test:
         name: "Beta Test"
         uses: muselab-d2x/d2x/.github/workflows/beta-test{% if cookiecutter.project_type == "2GP Managed" %}-2gp{% elif cookiecutter.project_type == "2GP Unlocked" %}-unlocked{% endif %}.yml@main
         secrets:{% raw %}
