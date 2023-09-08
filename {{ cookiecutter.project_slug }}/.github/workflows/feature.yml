@@ -9,7 +9,7 @@ on:
 jobs:
     feature-test:
         name: "Feature Test"
-        uses: muselab-d2x/d2x/.github/workflows/feature-test{% if cookiecutter.project_type != "Unpackaged" %}-2gp{% endif %}.yml@main
+        uses: muselab-d2x/d2x/.github/workflows/feature-test{% if cookiecutter.project_type == "Unpackaged" %}{% elif cookiecutter.project_type == "2GP Unlocked" %}-unlocked{% else %}-2gp{% endif %}.yml@main
         secrets:{% raw %}
             dev-hub-auth-url: "${{ secrets.DEV_HUB_AUTH_URL }}"
             gh-email: "${{ secrets.GH_EMAIL }}"
