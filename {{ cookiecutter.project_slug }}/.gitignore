@@ -7,10 +7,8 @@
 *.pyc
 __pycache__
 
-{% if cookiecutter.use_robot != "n" %}
 # Robot Framework results
 robot/{{ cookiecutter.project_slug }}/results/
-{% endif %}
 
 # Salesforce cache
 .sf/
