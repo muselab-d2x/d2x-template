@@ -6,5 +6,5 @@
         }
     ],
     "namespace": "{{ cookiecutter.namespace }}",
-    "sourceApiVersion": "55.0"
+    "sourceApiVersion": "58.0"
 }
