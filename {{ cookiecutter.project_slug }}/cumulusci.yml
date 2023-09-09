@@ -13,16 +13,6 @@ project:
       
 
 tasks:
-{% if cookiecutter.use_robot != "n" %}    robot:
-        options:
-            suites: robot/{{ cookiecutter.project_slug }}/tests
-            options:
-                outputdir: robot/{{ cookiecutter.project_slug }}/results
-
-    robot_testdoc:
-        options:
-            path: robot/{{ cookiecutter.project_slug }}/tests
-            output: robot/{{ cookiecutter.project_slug }}/doc/{{ cookiecutter.project_slug }}_tests.html{% endif %}
     run_tests:
         options:
             required_org_code_coverage_percent: 75
