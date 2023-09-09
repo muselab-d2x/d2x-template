@@ -8,9 +8,9 @@ project:
     git:
         default_branch: 'main'
     source_format: sfdx
-    {% if cookiecutter.dependencies %}dependencies:
-      {% for repo_url in dependencies %}  - github: "{{ repo_url }}"{% endfor %}{% endif %}
-        
+    {% if cookiecutter.dependencies %}{% set deps = cookiecutter.dependencies.split(',') %}dependencies:
+      {% for repo_url in deps %}  - github: "{{ repo_url }}"{% endfor %}{% endif %}
+      
 
 tasks:
 {% if cookiecutter.use_robot != "n" %}    robot:
