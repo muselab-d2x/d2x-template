@@ -1,12 +1,8 @@
-# d2x-template
+# D2X Template
+This repository provides a project template for creating new Salesforce development projects on GitHub preconfigured for use with [D2X](https://github.com/muselab-d2x/d2x). It is built using [cookiecutter](https://cookiecutter.readthedocs.io/en/stable/index.html) and primary used by [MuseLab D2X Launchpad](https://launchpad.muselab.com), a web based tool for launching D2X configured GitHub repositories.
 
-Add a brief description of this project here, in Markdown format.
-It will be shown on the main page of the project's GitHub repository.
-
-## Development
-
-To work on this project in a scratch org:
-
-1. [Set up CumulusCI](https://cumulusci.readthedocs.io/en/latest/tutorial.html)
-2. Run `cci flow run dev_org --org dev` to deploy this project.
-3. Run `cci org browser dev` to open the org in your browser.
+It is also possible to use this template directly via cookiecutter:
+```
+$ pipx install cookiecutter
+$ cookiecutter gh:muselab-d2x/d2x-template
+```
