@@ -8,6 +8,6 @@
         "2GP Managed"
     ],
     "namespace": "",
-    "dependencies": ["Enter the GitHub Repo URL for any repositories you want to set as a dependency. Multiple repositories can be entered by separating with a comma."],
+    "dependencies": "Enter the GitHub Repo URL for any repositories you want to set as a dependency. Multiple repositories can be entered by separating with a comma.",
     "use_robot": "n"
 }
