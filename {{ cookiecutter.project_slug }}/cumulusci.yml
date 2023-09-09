@@ -4,7 +4,7 @@ project:
     package:
         name: {{ cookiecutter.project_name }}
         {% if cookiecutter.namespace %}namespace: {{ cookiecutter.namespace }}{% endif %}
-        api_version: '55.0'
+        api_version: '58.0'
     git:
         default_branch: 'main'
     source_format: sfdx
