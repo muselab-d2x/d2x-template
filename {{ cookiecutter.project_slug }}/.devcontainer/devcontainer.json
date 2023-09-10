@@ -20,5 +20,15 @@
     "remoteEnv": {
         "DEV_HUB_AUTH_URL": "${localEnv:DEV_HUB_AUTH_URL}"{% if cookiecutter.dependencies %},
         "GITHUB_TOKEN": "${localEnv:CCI_GITHUB_TOKEN}"
-    {% endif %}}
+    {% endif %}},
+    "secrets": {
+        "DEV_HUB_AUTH_URL": {
+            "description": "An sfdxAuthUrl to log into the Dev Hub org with permissions for scratch org creation",
+            "documentationUrl": "https://d2x.readthedocs.io/tutorial/#secrets"
+        },
+        "CCI_GITHUB_TOKEN": {
+            "description": "A GitHub Personal Access Token with the repo scope to access other repositories as CumulusCI dependencies",
+            "documentationUrl": "https://d2x.readthedocs.io/en/latest/tutorial/#github-token"
+        }
+    }
 }
