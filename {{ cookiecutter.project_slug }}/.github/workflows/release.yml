@@ -8,5 +8,5 @@ jobs:
         secrets:{% raw %}
             dev-hub-auth-url: "${{ secrets.DEV_HUB_AUTH_URL }}"
             gh-email: "${{ secrets.GH_EMAIL }}"
-            github-token: "${{ secrets.{% if cookiecutter.dependencies %}CCI_{% endif %}GITHUB_TOKEN }}"{% endraw %}
+            github-token: "${{ secrets.{% endraw %}{% if cookiecutter.dependencies %}CCI_{% endif %}{% raw %}GITHUB_TOKEN }}"{% endraw %}
             {% if cookiecutter.project_type == "1GP Managed" %}{% raw %}packaging-org-auth-url: "${{ secrets.PACKAGING_ORG_AUTH_URL }}"{% endraw %}{% endif %}
