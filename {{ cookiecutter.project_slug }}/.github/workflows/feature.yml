@@ -11,4 +11,4 @@ jobs:
         secrets:{% raw %}
             dev-hub-auth-url: "${{ secrets.DEV_HUB_AUTH_URL }}"
             gh-email: "${{ secrets.GH_EMAIL }}"
-            github-token: "${{ secrets.}{% endraw %}{% if cookiecutter.dependencies %}CCI_{% endif %}{% raw %}GITHUB_TOKEN }}"{% endraw %}
+            github-token: "${{ secrets.{% endraw %}{% if cookiecutter.dependencies %}CCI_{% endif %}{% raw %}GITHUB_TOKEN }}"{% endraw %}
