@@ -1,0 +1,12 @@
+name: Production Release
+on:
+    workflow_dispatch:
+jobs:
+    feature-test:
+        name: "Production Release"
+        uses: 'muselab-d2x/d2x/.github/workflows/release-{% if cookiecutter.project_type == "1GP Managed %}1gp{% elif cookiecutter.project_type == "2GP Managed" %}2gp{% elif cookiecutter.project_type == "2GP Unlocked" %}2gp-unlocked{% endif %}.yml@main'
+        secrets:
+            dev-hub-auth-url: "${{ secrets.DEV_HUB_AUTH_URL }}"
+            packaging-org-auth-url: "${{ secrets.PACKAGING_ORG_AUTH_URL }}"
+            gh-email: "${{ secrets.GH_EMAIL }}"
+            github-token: "${{ secrets.{% if cookiecutter.dependencies %}CCI_{% endif %}GITHUB_TOKEN }}"
