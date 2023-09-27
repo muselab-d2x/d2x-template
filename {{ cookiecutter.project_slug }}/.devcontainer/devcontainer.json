@@ -17,6 +17,9 @@
             ]
         }
     },
+    "features": {
+        "ghcr.io/devcontainers/features/java:1": {}
+    },
     "remoteEnv": {
         "DEV_HUB_AUTH_URL": "${localEnv:DEV_HUB_AUTH_URL}"{% if cookiecutter.dependencies %},
         "GITHUB_TOKEN": "${localEnv:CCI_GITHUB_TOKEN}"
