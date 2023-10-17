@@ -1,8 +1,8 @@
 {
-  "name": "salesforce-app",
+  "name": "{{ cookiecutter.project_slug|lower }}",
   "private": true,
   "version": "1.0.0",
-  "description": "Salesforce App",
+  "description": "{{ cookiecutter.project_name }}",
   "scripts": {
     "lint": "eslint **/{aura,lwc}/**",
     "test": "npm run test:unit",
