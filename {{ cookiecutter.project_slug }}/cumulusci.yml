@@ -9,7 +9,8 @@ project:
         default_branch: 'main'
     source_format: sfdx
     {% if cookiecutter.dependencies %}{% set deps = cookiecutter.dependencies.split(',') %}dependencies:
-      {% for repo_url in deps %}  - github: "{{ repo_url }}"{% endfor %}{% endif %}
+      {% for repo_url in deps %}
+        - github: "{{ repo_url }}"{% endfor %}{% endif %}
       
 
 tasks:
