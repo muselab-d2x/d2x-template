@@ -4,7 +4,7 @@ on:
 jobs:
     feature-test:
         name: "Production Release"
-        uses: 'muselab-d2x/d2x/.github/workflows/release-{% if cookiecutter.project_type == "1GP Managed" %}1gp{% elif cookiecutter.project_type == "2GP Managed" %}2gp{% elif cookiecutter.project_type == "2GP Unlocked" %}2gp-unlocked{% endif %}.yml@main'
+        uses: muselab-d2x/d2x/.github/workflows/release-{% if cookiecutter.project_type == "1GP Managed" %}1gp{% elif cookiecutter.project_type == "2GP Managed" %}2gp{% elif cookiecutter.project_type == "2GP Unlocked" %}2gp-unlocked{% endif %}.yml@{% if cookiecutter.use_cumulusci_next %}cumulusci-next{% else %}main{% endif %}
         secrets:{% raw %}
             dev-hub-auth-url: "${{ secrets.DEV_HUB_AUTH_URL }}"
             gh-email: "${{ secrets.GH_EMAIL }}"

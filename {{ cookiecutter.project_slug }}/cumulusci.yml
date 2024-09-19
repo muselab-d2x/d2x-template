@@ -17,6 +17,12 @@ tasks:
     run_tests:
         options:
             required_org_code_coverage_percent: 75
+    {% if cookiecutter.use_cumulusci_next %}github_pull_request_snapshot:
+        options:
+            project_code: {{ cookiecutter.project_slug[:2].upper() }}
+            snapshot_pr: True
+            snapshot_failure: True
+    {% endif %}
 
 orgs:
     scratch:
